@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import LinkList from './components/LinkList';
-import CreateShortLink from './components/CreateShortLink';
+import LinkList from './LinkList';
+import CreateShortLink from './CreateShortLink';
 
 class App extends Component {
   render() {

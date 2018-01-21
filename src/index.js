@@ -8,8 +8,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import { WebSocketLink } from 'apollo-link-ws';
 import { getMainDefinition } from 'apollo-utilities';
 
-import './index.css';
-import App from './App';
+import AppRouter from './AppRouter';
 import registerServiceWorker from './registerServiceWorker';
 
 const wsLink = new WebSocketLink({
@@ -41,5 +40,8 @@ const withApolloProvider = Comp => (
   <ApolloProvider client={client}>{Comp}</ApolloProvider>
 );
 
-ReactDOM.render(withApolloProvider(<App />), document.getElementById('root'));
+ReactDOM.render(
+  withApolloProvider(<AppRouter />),
+  document.getElementById('root')
+);
 registerServiceWorker();
